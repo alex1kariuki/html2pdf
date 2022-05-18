@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'html2pdf';
+  name: string = '';
+  /**
+   *
+   */
+  constructor() {
+    
+  }
+  generateQR(){
+    console.log(this.name);
+  }
 }
