@@ -1,3 +1,10 @@
-<p>Enter your name below to generate personal QR Code</p>
-<input placeholder="Your name"/>
-<button (click)="generateQR()">Generate QR</button>
+<p>Print the QR Below</p>
+
+
+<div id="element-to-print">
+  <qr-code class="qr-coded" [value]="'{{name}}'" [size]="width"></qr-code>
+  <div class="html2pdf__page-break"></div>
+  <qr-code class="qr-coded" [value]="'{{otherName}}'" [size]="width"></qr-code>
+</div>
+
+<button (click)="printQr()">Print QR</button>
