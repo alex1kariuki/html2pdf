@@ -1,10 +1,11 @@
 <p>Print the QR Below</p>
 
-
 <div id="element-to-print">
-  <qr-code class="qr-coded" [value]="'{{name}}'" [size]="width"></qr-code>
+  <qr-code class="qr-coded" *ngFor="let a of myArray" [value]="'{{a, name}}'"></qr-code>
+
   <div class="html2pdf__page-break"></div>
-  <qr-code class="qr-coded" [value]="'{{otherName}}'" [size]="width"></qr-code>
+
+  <qr-code class="qr-coded" [value]="'{{otherName}}'"></qr-code>
 </div>
 
 <button (click)="printQr()">Print QR</button>
